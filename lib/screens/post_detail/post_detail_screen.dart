@@ -16,7 +16,6 @@ class PostDetailScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // 画像スライダー
           if (post.imageUrls.isNotEmpty)
             SizedBox(
               height: 220,
@@ -28,7 +27,7 @@ class PostDetailScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(post.imageUrls[index]),
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                       ),
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -37,14 +36,12 @@ class PostDetailScreen extends StatelessWidget {
               ),
             ),
           const SizedBox(height: 16),
-
           Wrap(
             spacing: 8,
             children:
                 post.categories.map((cat) => Chip(label: Text(cat))).toList(),
           ),
           const SizedBox(height: 12),
-
           Row(
             children: [
               const Icon(Icons.calendar_today, size: 18),
@@ -53,10 +50,8 @@ class PostDetailScreen extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-
           Text(post.description, style: const TextStyle(fontSize: 16)),
           const SizedBox(height: 24),
-
           SizedBox(
             height: 200,
             child: GoogleMap(
