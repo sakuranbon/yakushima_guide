@@ -1,16 +1,38 @@
-# yakushima_guide
+# Yakushima Guide App（Flutter × Firebase）
 
-A new Flutter project.
+## 概要
 
-## Getting Started
+屋久島の観光体験をユーザーが自由に投稿・共有できる地図付きガイドアプリです。  
+写真付きで投稿されたスポットは、カテゴリや訪問時期とともに表示されます。  
+旅行者同士でリアルな情報を交換でき、観光をより楽しく・便利にします。
 
-This project is a starting point for a Flutter application.
+## 使用技術
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter（Web 対応）
+- Firebase Authentication（匿名認証）
+- Firebase Storage（画像保存）
+- Firestore（投稿データの保存）
+- Riverpod（状態管理）
+- Google Maps API（地図・ピン機能）
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 実装ポイント
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 最大 5 枚まで画像をアップロード可能（CORS 設定済み）
+- カテゴリ、訪問時期、紹介文などを投稿時に設定可能
+- Google Map 上にピンを立てて、訪問スポットを視覚化
+- 投稿一覧 → 詳細画面で画像や地図をしっかり表示
+- Riverpod を使った状態管理、非同期処理の整理
+- Web 環境でも画像投稿＆表示が可能な Flutter 構成
+
+## 想定ユーザーの行動フロー
+
+1. 屋久島で印象に残ったスポットをアプリで投稿（写真・説明・地図）
+2. 他の人の投稿を見て、知らなかった場所を発見
+3. 次の旅行計画に役立てる！
+
+## 今後のアップデート構想
+
+- いいね / コメント機能
+- 投稿のランキング表示（人気スポット）
+- 投稿者プロフィール管理
+- 地域別・カテゴリ別での絞り込み検索
