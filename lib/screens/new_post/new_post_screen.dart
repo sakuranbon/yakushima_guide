@@ -194,11 +194,11 @@ class _NewPostScreenState extends State<NewPostScreen> {
             TextFormField(
               controller: _descController,
               decoration: const InputDecoration(
-                labelText: '紹介文（10〜100文字）',
+                labelText: '紹介文（10〜200文字）',
                 border: OutlineInputBorder(),
               ),
-              maxLength: 100,
-              maxLines: 3,
+              maxLength: 200,
+              maxLines: 6,
               validator: (value) {
                 if (value == null || value.trim().length < 10) {
                   return '10文字以上入力してください';
