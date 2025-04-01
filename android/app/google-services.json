@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "34049309500",
+    "project_id": "yakushima-guide-2d06f",
+    "storage_bucket": "yakushima-guide-2d06f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34049309500:android:5eecdba2bfb5d66542bc39",
+        "android_client_info": {
+          "package_name": "com.example.yakushima_guide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS2ZqJoSYuze-I64eh3DthIHVLIF64jTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
